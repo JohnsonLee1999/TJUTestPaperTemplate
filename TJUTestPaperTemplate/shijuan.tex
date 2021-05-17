@@ -1,0 +1,157 @@
+\documentclass[twocolumn,UTF8]{ctexart}
+\ctexset{section = {name = {,、\hspace*{-5mm}},number = \chinese{section},format = {\hwzsong\zihao{4}\bfseries\raggedright}}}
+\usepackage{titlesec}%titlesec宏包调整section与正文间距
+\usepackage{esint}
+\usepackage{setspace}%使用间距宏包
+\titlespacing*{\section} {0pt}{9pt}{4pt}
+%====================================================================================================%
+\setCJKmainfont{宋体}
+\renewcommand{\heiti}{\CJKfontspec{黑体}}
+\renewcommand{\fangsong}{\CJKfontspec{仿宋}}
+\renewcommand{\kaishu}{\CJKfontspec{楷体}}
+%====================================================================================================%
+\usepackage{zref-user,zref-lastpage}%使用zref宏包,引用数字标签值和LastPage标签,感谢qingkuan大神指导
+\usepackage{times} %use the Times New Roman fonts
+\usepackage{bigstrut}
+\usepackage{enumerate}
+\usepackage{amsmath,amssymb,bm}
+\everymath{\displaystyle}
+\usepackage[paperwidth=42cm,paperheight=29.7cm,top=4.4cm,bottom=2.5cm,left=3cm,right=0cm]{geometry}
+\usepackage{fancyhdr}\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \usepackage{tikz}
+    \usepackage{fancybox}
+    \fancyput(0cm,-25.3cm){\tikz \draw[solid,line width=2pt](0,0) rectangle (37cm,24cm);}
+ %solid,dashed%pdfmanual.pdf---p167
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%选择题%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%选项单行
+\newcommand{\xo}[4]{\makebox[100pt][l]{(A) #1} \hfill
+                    \makebox[100pt][l]{(B) #2} \hfill
+                    \makebox[100pt][l]{(C) #3} \hfill
+                    \makebox[100pt][l]{(D) #4}}
+%选项分两行。
+\newcommand{\xab}[2]{\makebox[100pt][l]{(A) #1} \hfill
+                     \makebox[230pt][l]{(B) #2}}
+\newcommand{\xcd}[2]{\makebox[100pt][l]{(C) #1} \hfill
+                     \makebox[230pt][l]{(D) #2}}
+%选项分四行.
+\newcommand{\xa}[1]{(A) #1}
+\newcommand{\xb}[1]{(B) #1}
+\newcommand{\xc}[1]{(C) #1}
+\newcommand{\xd}[1]{(D) #1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textwidth=36.2cm        %文本的宽度
+
+\begin{document}\setlength{\columnseprule}{0pt}\zihao{4}\renewcommand\arraystretch{1.5}
+\fancyhead[LO,LE]{\zihao{4}\vspace*{-18mm}\hspace{-4mm}{\heiti 学院}\underline{\hspace{1.5cm}\kaishu{理学院}\hspace{1.5cm}}{\heiti 专业}\underline{\hspace{7.5cm}}\hspace{0.5cm}\underline{\hspace{1.5cm}}{\heiti 班}}
+\fancyhead[CO,CE]{\vspace*{-18mm}{\setlength{\unitlength}{4mm}\begin{picture}(15,0)\put(-3,2){\zihao{-2}天津大学试卷专用纸}\end{picture}}\\
+\zihao{4}\hspace{10cm}{\heiti 年级}\underline{\hspace{0.5cm}\kaishu{2020级}\hspace{0.5cm}}{\heiti 学号}\underline{\hspace{6cm}}{\heiti 姓名}\underline{\hspace{40mm}}}
+\fancyhead[RO,RE]{\vspace*{-18mm}\zihao{4}第\;\thepage\;页\quad\; 共\;\zpageref{LastPage}\;页\hspace*{2.5cm}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setCJKfamilyfont{huawenxingkai}{华文行楷} \newcommand*{\xingkai}{\CJKfamily{huawenxingkai}}  %华文行楷
+\setCJKfamilyfont{STZhongsong}{华文中宋} \newcommand*{\hwzsong}{\CJKfamily{STZhongsong}}  %华文中宋
+
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{center} \vspace*{-4mm}
+      {\zihao{-2}\heiti 2020$\sim$2021学年第二学期期中模拟考试试卷}\\[6mm]
+      {\zihao{-2}\heiti《高等数学2B》\;(共\zpageref{LastPage}页，附2页草纸)}\\[4mm]
+   %输出"绝密"字样
+%{\heiti 绝密$\bigstar$启用前}\\[-13.5mm]%缩短"绝密"字样与总计分表之间的距离
+{\zihao{-2}\heiti (考试时间: 2021年5月7日~~13:30$\sim$15:30)}\\
+\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+\centering ~题号~ & \centering\hspace{2mm} 一 \hspace{2mm} & \centering \hspace{2mm} 二 \hspace{2mm} & \centering \hspace{2mm} 三 \hspace{2mm} &\centering\hspace{2mm} 四 \;\,\hspace{2mm}& \centering \hspace{2mm} 五 \hspace{2mm} &\centering \hspace{0.7mm} 成绩 \hspace{0.7mm} &\hspace{1mm}核分人签字\hspace{1mm} \bigstrut\\\hline
+\centering ~得分~ &  &  &  &  &    && \bigstrut\\ \hline
+\end{tabular}\\[5mm]
+  \end{center}
+
+%正文
+\section{选择题\songti{(本题满分15分, 每小题3分)}}
+\begin{enumerate}
+\item  设在 $\mathbb{R}^{2}$ 中有 $f_{x}^{\prime}(x, y)<0, f_{y}^{\prime}(x, y)>0$, 则在下列条件中使 $f\left(x_{1}, y_{1}\right)<f\left(x_{2}, y_{2}\right)$必定成立的是$(~~~~~)$.\\
+\xab{$x_{1}>x_{2}, y_{1}<y_{2}$}{$x_{1}<x_{2}, y_{1}<y_{2}$}\\
+\xcd{$x_{1}<x_{2}, y_{1}>y_{2}$}{$x_{1}>x_{2}, y_{1}>y_{2}$}
+
+\item 在曲线$x=t,y=-t^2,z=t^3$的所有切线中,与平面$x+2y+z=4$平行的切线$(~~~~~)$.\\
+\xo{只有一条}{只有两条}{至少有三条}{不存在}
+
+\item 设 $f(x)$ 是连续函数, 则 $\int_{0}^{1} \mathrm{~d} y \int_{-\sqrt{1-y^{2}}}^{1-y} f(x, y) \mathrm{d} x=(~~~~~)$.\\
+\xa{$\int_{0}^{1} \mathrm{d} x \int_{0}^{x-1} f(x, y) \mathrm{d} y+\int_{-1}^{0} \mathrm{d} x \int_{0}^{\sqrt{1-x^{2}}} f(x, y) \mathrm{d} y$}\\
+\xb{$\int_{0}^{1} \mathrm{d} x \int_{0}^{1-x} f(x, y) \mathrm{d} y+\int_{-1}^{0} \mathrm{d} x \int_{-\sqrt{1-x^{2}}}^{0} f(x, y) \mathrm{d} y$}\\
+\xc{$\int_{0}^{\frac{\pi}{2}} \mathrm{d} \theta \int_{0}^{1} f(r \cos \theta, r \sin \theta) r\mathrm{d} r+\int_{\frac{\pi}{2}}^{\pi} \mathrm{d} \theta \int_{0}^{\frac{1}{\cos \theta+\sin \theta}} f(r \cos \theta, r \sin \theta)r \mathrm{d} r$}\\
+\xd{$\int_{0}^{\frac{\pi}{2}} \mathrm{d} \theta \int_{0}^{\frac{1}{\cos \theta+\sin \theta}} f(r \cos \theta, r \sin \theta) r\mathrm{d} r+\int_{\frac{\pi}{2}}^{\pi} \mathrm{d} \theta \int_{0}^{1} f(r \cos \theta, r \sin \theta) r\mathrm{d} r$}
+
+\item 设$L_1$和$L_2$是将原点围在其内的两条光滑简单闭曲线,$\oint_{L_1}\frac{2x\mathrm{d}x+y\mathrm{d}y}{x^2+y^2}=k$,则$\oint_{L_2}\frac{2x\mathrm{d}x+y\mathrm{d}y}{x^2+y^2}$的值$(~~~~~)$.\\
+\xab{不一定等于$k$,其值与曲线$L_2$无关}{一定等于$k$}\\
+\xcd{不一定等于$k$,其值与曲线$L_2$有关}{一定等于$-k$}
+
+\item 设 $\Sigma$ 是球面 $x^{2}+y^{2}+z^{2}=4$ 的外侧,$\Omega=\left\{(x, y, z) \mid x^{2}+y^{2}+z^{2} \leqslant 4\right\}$,
+$$
+I=\oiint\limits_{\Sigma} x y^{2} z^{2} \mathrm{d} y \mathrm{d} z+x^{2} y z^{2} \mathrm{d} z \mathrm{d} x+x^{2} y^{2} z \mathrm{d}x\mathrm{d} y.
+$$
+则下列各式中不成立的是$(~~~~~)$.\\
+\xab{$I=\frac{3}{2} \iint\limits_{\Sigma} x^{2} y^{2} z^{2} \mathrm{d} S$}{$I=3 \iiint\limits_{\Omega} y^{2} z^{2} \mathrm{d} V$}\\
+\xcd{$I=\iiint\limits_{\Omega}\left(x^{2} y^{2}+y^{2} z^{2}+z^{2} x^{2}\right) \mathrm{d} V$}{$I=0$}
+
+\end{enumerate}
+
+\section{填空题\songti{(本题满分15分, 每小题3分)}}
+
+ \begin{enumerate}
+\item 已知 $\boldsymbol{A}=x y^{2} \boldsymbol{i}+y \mathrm{e}^{z} \boldsymbol{j}+x \ln \left(1+z^{2}\right) \boldsymbol{k}$, 则 $\left.\operatorname{grad}(\operatorname{div} \boldsymbol{A})\right|_{(1,1,0)}=\underline{\hspace{3.5cm}}$.
+\begin{spacing}{2.8}  \zihao{4}
+\item 设 $L$ 是闭曲线 $|x|+|y|=1$, 则 $\oint_{L}|x|[1+\sin (x y)] \mathrm{d} s=\underline{\hspace{5.5cm}}$.
+
+\item 半椭圆形平面闭区域$D=\left\{(x,y)\left|\frac{x^2}{a^2}+\frac{y^2}{b^2}\leqslant 1,y\geqslant0\right.\right\}$上的薄片的质心坐标为$\underline{\hspace{5cm}}$.
+
+\item 设 $\Sigma$ 为圆柱面 $x^{2}+y^{2}=R^{2}$ 介于平面 $z=0$ 和 $z=H$ 之间的部分, 其中 $R, H>0$, 则 $\oiint\limits_{\Sigma} x^{2} \mathrm{d} S=\underline{\hspace{5cm}}$.
+
+\item 微分方程$ \left(3 x^{2}+6 x y^{2}\right) \mathrm{d} x+\left(4 y^{3}+6 x^{2} y\right) \mathrm{d} y=0$的通解为$\underline{\hspace{4.5cm}}$.
+\end{spacing}
+\end{enumerate}
+
+\newpage\section{计算题\songti{(本题满分48分, 每小题8分)}}
+\begin{enumerate}
+\item 设 $f(x, y)=\int_{0}^{x y} e^{-t^{2}} \mathrm{d} t$, 求$ \frac{x}{y} \frac{\partial^{2} f}{\partial x^{2}}-2 \frac{\partial^{2} f}{\partial x \partial y}+\frac{y}{x} \frac{\partial^{2} f}{\partial y^{2}}$.
+
+\vspace{8cm}
+\item 计算$I=\iint\limits_D |\cos (x+y)|\mathrm{d}x\mathrm{d}y$,其中$D$是由直线$y=x,y=0,x=\frac{\pi}{2}$围成的闭区域.
+
+\newpage\item 设 $\Omega$ 是由曲面 $\left(x^{2}+y^{2}+z^{2}\right)^{2}=2\left(z^{2}-x^{2}-y^{2}\right)$ 所围成的区域在 $z \geqslant 0$ 的部分, 求 $\iiint\limits_{\Omega} z \mathrm{d} V$.
+
+\vspace{8cm}
+\item 一质点受力 $\boldsymbol{F}(x, y)=\left(2 x y^{2}, 2 x^{2} y\right)$ 的作用, 沿平面曲线 $L: x=t, y=t^{2}$ 从点 $A(1,1)$ 移动到点 $B(2,4)$, 求力$\boldsymbol{F}$所作的功.
+
+\newpage\item 求$\iint\limits_{\Sigma} z \mathrm{d} x \mathrm{d} y+x y \mathrm{d} y \mathrm{d} z$,其中$\Sigma$为$x^2+y^2=1$被$z=0$和$z=1$所截部分在第一卦限内的前侧.
+
+\vspace{8cm}
+\item 设$\Sigma$是球面$x^2+y^2+z^2=1$的外侧,求积分$\oiint\limits_{\Sigma} \frac{\mathrm{d} y \mathrm{d} z}{x}+\frac{\mathrm{d} z \mathrm{d} x}{y}+\frac{\mathrm{d} x \mathrm{d} y}{z}$的值.
+\end{enumerate}
+
+\newpage\section{计算题\songti{(本题满分16分, 每小题8分)}}
+\begin{enumerate}
+\item 设 $L$ 是第一象限中从点 $(0,0)$ 沿圆周 $x^{2}+y^{2}=2 x$ 到点 $(2,0)$, 再沿圆周 $x^{2}+y^{2}=4$ 到点 $(0,2)$ 的曲线 段, 计算 $\int_{L} 3 x^{2} y \mathrm{d} x+\left(x^{3}+x-2 y\right) \mathrm{d} y$.
+
+\newpage\item 已知$\Sigma$是上半椭球面$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1(a,b,c>0,0\leqslant z \leqslant c)$的上侧,计算
+$$
+I=\iint\limits_{\Sigma} \frac{\displaystyle\frac{x y^{2}}{b^{2}} \mathrm{d} y \mathrm{d} z+\frac{y z^{2}}{c^{2}} \mathrm{d} z \mathrm{d} x+\frac{z x^{2}}{a^{2}} \mathrm{d} x \mathrm{d} y}{\displaystyle\sqrt{\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}}}.
+$$
+\end{enumerate}
+
+\newpage
+\section{证明题\songti{(本题满分6分)}}
+设 $f(x)$ 是连续函数且其值恒大于零, 又
+$$
+F(t)=\frac{\displaystyle\iiint\limits_{\Omega(t)} f\left(x^{2}+y^{2}+z^{2}\right) \mathrm{d} V}{\displaystyle\iint\limits_{D(t)} f\left(x^{2}+y^{2}\right) \mathrm{d} \sigma}, G(t)=\frac{\displaystyle\iint\limits_{D(t)} f\left(x^{2}+y^{2}\right) \mathrm{d} \sigma}{\displaystyle\int_{-t}^{t} f\left(x^{2}\right) \mathrm{d} x},
+$$
+其中 $\Omega(t)=\left\{(x, y, z) \mid x^{2}+y^{2}+z^{2} \leqslant t^{2}\right\}, D(t)=\left\{(x, y) \mid x^{2}+y^{2} \leqslant t^{2}\right\}.$\\
+(1) 讨论函数 $F(t)$ 在区间 $(0,+\infty)$ 上的单调性;\\
+(2) 证明当 $t>0$ 时,$F(t)>\frac{2}{\pi} G(t)$.
+
+\end{document}
